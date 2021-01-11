@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>
+            Family Book
+        </title>
+    </head>
+    <body>
+        <center>
+            <h1 id="header">
+                My Family Book
+            </h1>
+            <img id="album" src="https://i.postimg.cc/MKdhy06Z/family.jpg" height="400px">
+            <h3 id="family_names"></h3>
+            <button onclick="Nextslide()" id="buttonNext"> Next </button>
+        </center>
+        <script>
+            var images= [
+            "https://i.pinimg.com/736x/c1/5e/ff/c15effc3689a48b309a856994d53ab81.jpg",
+            "https://cdn2.vectorstock.com/i/1000x1000/47/01/smiling-kid-boy-cartoon-character-vector-15054701.jpg",
+            "https://i.postimg.cc/bw5W5zSK/mother.jpg",
+            "https://i.postimg.cc/wjMnFtMX/father.jpg",
+            "https://i.pinimg.com/originals/d8/ac/a9/d8aca934c60c7f9392f8828e50b03f4b.jpg",
+            "https://i.postimg.cc/L6HcYQM0/grand-father.png"
+            ];
+            var names= [
+                "Anshuman Goyal",
+                "Aryaman Goyal",
+                "Neha Goyal",
+                "Prateek Goyal",
+                "Asha Goyal",
+                "Shyam Goyal"
+            ];
+            var i=0;
+            function Nextslide(){
+                document.getElementById('album').src = images[i];
+                document.getElementById('family_names').innerHTML = names[i];
+                [i++];
+                if(i == 6){
+                i=0;
+            };
+            };
+
+            
+        </script>        
+    </body>
+</html>
